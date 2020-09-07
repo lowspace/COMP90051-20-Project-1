@@ -106,7 +106,7 @@ def jaccard2(a:str, b:str, graph:dict) -> float:
     SigmaOutA = getSigmaOut(a, graph)
     if SigmaOutA:
         for node in SigmaOutA:
-            score += jaccard1(b, node)
+            score += jaccard1(b, node, graph)
         return float(score/len(SigmaOutA))
     else:
         return 0
@@ -138,7 +138,7 @@ def jaccard3(a:str, b:str, graph:dict) -> float:
     SigmaInB = getSigmaIn(b, graph)
     if SigmaInB:
         for node in SigmaInB:
-            score += jaccard1(a, node)
+            score += jaccard1(a, node, graph)
         return float(score/len(SigmaInB))
     else:
         return 0
