@@ -11,9 +11,9 @@
   - Wei LI
   
 ## Data Set
-Number of UserID: 20,000
-Number of Followee: 
-Number of Edge/Link:
+Number of UserID: 20,000<br>
+Number of Followee: <br>
+Number of Edge/Link:<br>
 
 ## Kaggle Result
 
