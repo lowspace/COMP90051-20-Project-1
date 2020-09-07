@@ -21,4 +21,4 @@ Number of Edge/Link:<br>
 | :---               | :---:       |   :---:     |   :---:     |  
 | *Jaccard*          | 0.70291     |             |             |
 | *Cosine*           |
-| *Common Neighbors* |
+| *Common Neighbors* | 0.68477
