@@ -7,6 +7,7 @@ import re
 import pandas as pd
 import multiprocessing as mp
 import time
+import copy as cp
 
 # read train data
 file_dir = '/Users/dnhb/PycharmProjects/SML_Ass1'
@@ -104,24 +105,25 @@ if __name__ == '__main__':
     
     startTime = time.time()
     
-    Jaccard2 = pool.map(getPro, test_set)
+    Jaccard2 = pool.map(getPro, test_set[0:2])
     pool.close()
     pool.join()
     
     endTime = time.time()
     print("Total time:" + (endTime - startTime).__str__())
     
-Jaccard2_result = sorted(Jaccard2, key=lambda x: x[-1], reverse=True)
-for item in Jaccard2_result:
-    index = Jaccard2_result.index(item)
-    if index < len(Jaccard2_result)/2:
-        Jaccard2_result[index][-1] = 1
-    else:
-        Jaccard2_result[index][-1] = 0
-Jaccard2_result = sorted(Jaccard2_result, key=lambda x: x[0], reverse=False)
+    Jaccard2_result = sorted(Jaccard2, key=lambda x: x[-1], reverse=True)
+    Jaccard2_result = cp.deepcopy(Jaccard2_result)
+    for item in Jaccard2_result:
+        index = Jaccard2_result.index(item)
+        if index < len(Jaccard2_result)/2:
+            Jaccard2_result[index][-1] = 1
+        else:
+            Jaccard2_result[index][-1] = 0
+    Jaccard2_result = sorted(Jaccard2_result, key=lambda x: x[0], reverse=False)
 
-title = ["Id", "Predicted"]
-test_pd = pd.DataFrame(columns = title, data = Jaccard2_result)
-test_pd.to_csv('/Users/dnhb/PycharmProjects/SML_Ass1/Jaccard2.csv',encoding='utf-8')
-test_pd = pd.DataFrame(columns = title, data = Jaccard2)
-test_pd.to_csv('/Users/dnhb/PycharmProjects/SML_Ass1/Jaccard2Score.csv',encoding='utf-8')
+    title = ["Id", "Predicted"]
+    test_pd = pd.DataFrame(columns = title, data = Jaccard2_result)
+    test_pd.to_csv('/Users/dnhb/PycharmProjects/SML_Ass1/Jaccard2.csv',encoding='utf-8')
+    test_pd = pd.DataFrame(columns = title, data = Jaccard2)
+    test_pd.to_csv('/Users/dnhb/PycharmProjects/SML_Ass1/Jaccard2Score.csv',encoding='utf-8')
