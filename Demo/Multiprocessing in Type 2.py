@@ -5,6 +5,8 @@ Data Preprocessing
 import os
 import re
 import pandas as pd
+import multiprocessing as mp
+import time
 
 # read train data
 file_dir = '/Users/dnhb/PycharmProjects/SML_Ass1'
