@@ -24,3 +24,8 @@
 ## 09/09/20
 - [ ] Identify what features or measurements we should use in our vector space
 - [ ] Discuss the idea and implement of RF
+
+## 08/09/20
+1. Computing type 2 and type 3 occupies too much time, thus as for now, only considering type 1 similarity.
+2. Train data = sub date of *train.txt*. Since the link number of original train set is too large to compute the similarity on the link.
+- [ ] Discuss RF latter
