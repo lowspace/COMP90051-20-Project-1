@@ -20,5 +20,5 @@ Number of Edge/Link:<br>
 | Individual Feature | Type 1      | Type 2      | Type 3      |
 | :---               | :---:       |   :---:     |   :---:     |  
 | *Jaccard*          | 0.70291     |             |             |
-| *Cosine*           |
+| *Cosine*           | 0.71292
 | *Common Neighbors* | 0.68477
