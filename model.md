@@ -11,6 +11,7 @@ if A and B are both followed by more people, then A and B are more likely to fol
 if B is in the same cluster of more IDs in the following list of A, then A is more likely to follow B.
 
 ## Model 
+### 
 A random forest (RF) classifer trained by features of the links.
 + Links = A directed edge/link between two nodes/vertices
 + Features = Description of the attributions of the link, such as the similarity, clustering, degree, and so on.
