@@ -29,3 +29,24 @@
 1. Computing type 2 and type 3 occupies too much time, thus as for now, only considering type 1 similarity.
 2. Train data = sub date of *train.txt*. Since the link number of original train set is too large to compute the similarity on the link.
 - [ ] Discuss RF latter
+
+## 09/09/20 - 10/09/20
+- [x] Multiple processing to compute similarity
+- [x] Complete CN feature similarity computing
+- [x] Try to mix type2 and type 3 and expect to obtain a promising result
+
+## 11/09/20
+- [x] Construct negative dataset
+- [x] Try random forset, with similarity features
+
+## 12/09/20
+- [x] Complete KNN similarity computing, but it has a bad performance
+
+## 13/09/20 - 16/09/20
+- [x] Using memory to record the scores of training data, validation data, and test data
+- [x] Compute Adar similarity, but discard type 2 due to computation limitation
+- [x] Tune hype-parameters of RF
+- [x] Try to solve the overfitting problem of RF and logistic regression
+
+## 17/09/20 - 19/09/20
+- [x] Complete report in Overleaf
