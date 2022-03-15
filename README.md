@@ -32,3 +32,17 @@ Number of Edge/Link:24,004,361<br>
 | :---               | :---:       |
 |RF| **0.85922**|
 |LR| 0.79229|
+
+## Score and Comments
+
+Kaggle competition: 15.66/16
+
+Final report: 11.2/14
+
+Total: 26.8/30
+
+Comment in critical analysis (7.2/9):
+> Good work! The report covers the key aspects: sampling, feature generation, learning and model selection. While the features considered were relatively simple, they performed surprisingly well - especially "cosine similarity". A couple of classifiers were considered, including a non-linear one. Tuning was done via cross-validation to avoid overfitting, however it's unclear how the final model was selected (test AUCs are reported, so may be overfitting). The sampling was naive - missing edges were treated as fake and there was no attempt to match the test set. It was great that you mentioned future directions to explore - including node embeddings.
+
+Comment in clarity and structure (4/5):
+> The report was a pleasure to read. It was well-structured and clear. I appreciated the use of tables to summarise the results and features. Some space could have been put to better use expanding on insights/motivations etc., rather than defining well-known concepts (e.g. random forest, logistic regression, ROC-AUC). Good referencing.
